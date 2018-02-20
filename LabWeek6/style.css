@@ -1,0 +1,47 @@
+body{
+	background-color: #F1FDFF;
+	margin: 0px;
+
+}
+#body{
+	background-color: #E5EEFF;
+}
+#header{
+	text-align: center;
+	background-image: url(Images/PoolDown.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+h1{
+	color: white;
+
+}
+#content{
+	width: 40%;
+	float: left;
+}
+#hilight{
+	float: right;
+	width: 20%
+	border: 2px;
+	padding: 1px;
+	background-image: url(Images/LotusSkyBar.jpg);
+
+}
+#nav{
+	text-align: center;
+	background-color: yellow;
+}
+#footer{
+	background-color: #D0DEE8;
+	color: black;
+}
+td, th{
+	border: 3px black solid;
+}
+td img{
+	width: 40%;
+}
+td{
+	text-align: center;
+}
