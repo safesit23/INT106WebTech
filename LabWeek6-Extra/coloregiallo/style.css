@@ -233,11 +233,11 @@ a:hover {
 }
 
 #sidebar ul {
-
+	text-decoration: none;
 }
 
 #sidebar li {
-
+	text-decoration: none;
 }
 
 #sidebar li ul {
@@ -330,14 +330,17 @@ a:hover {
 
 #footer-content #fbox1 {
 float: left;
+margin-left: 5%;
 }
 
 #footer-content #fbox2 {
 float: left;
+margin-left: 5%;
 }
 
 #footer-content #fbox3 {
 float: left;
+margin-left: 5%;
 }
 
 #footer-content a{
