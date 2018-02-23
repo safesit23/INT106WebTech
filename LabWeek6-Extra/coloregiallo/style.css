@@ -229,7 +229,7 @@ a:hover {
 /* Sidebar */
 
 #sidebar {
-
+	float: right;
 }
 
 #sidebar ul {
@@ -327,19 +327,18 @@ a:hover {
 }
 
 #footer-content #fbox1 {
-
+float: left;
 }
 
 #footer-content #fbox2 {
-
+float: left;
 }
 
 #footer-content #fbox3 {
-
+float: left;
 }
 
-#footer-content li {
-text-decoration: none;
+#footer-content a{
 }
 
 #column1 {
@@ -391,7 +390,7 @@ ul.style1 {
 }
 
 ul.style1 li {
-
+	text-decoration: none;
 	line-height: 160%;
 }
 
@@ -430,5 +429,8 @@ ul.style1 .first {
 }
 
 .button a {
-
+	display: block;
+	color: white;
+	background-color: black;
+	width: 5%;
 }
