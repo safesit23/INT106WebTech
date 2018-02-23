@@ -139,14 +139,13 @@ a:hover {
 #menu ul {
 	margin: 0px;
 	padding: 0px;
-	display: block;
+	display: flex;
+	justify-content: center;
 	list-style: none;
 	line-height: normal;
-	background-color: #f8db3f;
 }
 
 #menu li {
-	float: right;
 }
 
 #menu a {
