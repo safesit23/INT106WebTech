@@ -69,6 +69,10 @@ a:hover {
 
 #logo {
 	float: left;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: white;
 }
 
 #logo h1, #logo p {
@@ -77,7 +81,7 @@ a:hover {
 #logo h1 {
 	line-height: 120px;
 	letter-spacing: -2px;
-
+	font-size: 3em;
 }
 
 #logo h1 a {
@@ -230,6 +234,7 @@ a:hover {
 
 #sidebar {
 	float: right;
+	background-color: white;
 }
 
 #sidebar ul {
@@ -254,7 +259,6 @@ a:hover {
 }
 
 #sidebar li li a {
-
 	background: url(images/img04.jpg) no-repeat center 50%;
 }
 
@@ -302,12 +306,13 @@ a:hover {
 /* Three Column Footer Content */
 
 #footer-content-wrapper {
-
+	background-color: #172531;
 }
 
 #footer-content {
 	overflow: hidden;
-	background-color: #172531;
+	text-align: center;
+
 
 }
 
@@ -364,7 +369,7 @@ margin-left: 5%;
 /* Footer */
 
 #footer {
-
+	background-image: url(images/img01.jpg);
 }
 
 #footer p {
@@ -416,7 +421,6 @@ ul.style1 .first {
 
 #featured-content {
 	overflow: hidden;
-	background-color: white;
 	border-bottom: 5px solid black;
 
 }
