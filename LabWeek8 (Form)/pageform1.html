@@ -13,7 +13,7 @@
 		Telephone:<input type="input" name="Telephone"><br>
 		<br>
 		My shoes are SO old...<br>
-		<textarea name="message" rows="10" cols="50">No more than 300 characters long
+		<textarea name="message" rows="5" cols="50">No more than 300 characters long
 		</textarea>
 	</fieldset>
 	<br>
@@ -21,13 +21,16 @@
 	<fieldset>
 	<legend>Custom shoe design</legend>
 	<br>
-	Color(choose one):<br>
+	<fieldset>
+	<legend> Color(choose one):</legend>
 	<input type="radio" name="color" value="Red">Red<br>
 	<input type="radio" name="color" value="Blue">Blue<br>
 	<input type="radio" name="color" value="Black">Black<br>
 	<input type="radio" name="color" value="Silver">Silver<br>
+	</fieldset>
 	<br>
-	Features (choose as many as you want):<br>
+	<fieldset>
+	<legend>Features (choose as many as you want):</legend>
 	<input type="checkbox" name="Features" value="Sparkley lace">Sparkley lace
 	<br>
 	<input type="checkbox" name="Features" value="Metallic logo" checked>Metallic logo
@@ -48,9 +51,11 @@
 		<option name="Size" value="12">12</option>
 		<option name="Size" value="13">13</option>	
 	</select>
+	</fieldset>
+	</fieldset>
 	<br><br>
 	<input type="submit" value="Pimp My Shoes!">
-	<input type="submit" value="Pimp My Shoes!">
+	<input type="reset" value="Reset">
 	</fieldset>
 </form>
 </body>
