@@ -7,7 +7,7 @@
 <h1>"Pimp My Shoes" Contest Entry Form</h1>
 <form action="http://www.learningwebdesign.com/contest.php" action="post">
 	<fieldset>
-		Contest Entry Information<br>
+		<legend>Contest Entry Information</legend>
 		Name:<input type="text" name="Name"><br>
 		Email:<input type="input" name="EmailAddress"><br>
 		Telephone:<input type="input" name="Telephone"><br>
@@ -18,7 +18,9 @@
 	</fieldset>
 	<br>
 	<b>Design your custom Forcefields:</b><br>
-	Custom shoe design<br><br>
+	<fieldset>
+	<legend>Custom shoe design</legend>
+	<br>
 	Color(choose one):<br>
 	<input type="radio" name="color" value="Red">Red<br>
 	<input type="radio" name="color" value="Blue">Blue<br>
@@ -34,8 +36,22 @@
 	<br>
 	<input type="checkbox" name="Features" value="MP3-enabled">MP3-enabled
 	<br>
-	
-
+	Size<br>(Sizes reflect standard men's sizing):
+	<select>
+		<option name="Size" value="5">5</option>
+		<option name="Size" value="6">6</option>
+		<option name="Size" value="7">7</option>
+		<option name="Size" value="8">8</option>
+		<option name="Size" value="9">9</option>
+		<option name="Size" value="10">10</option>
+		<option name="Size" value="11">11</option>
+		<option name="Size" value="12">12</option>
+		<option name="Size" value="13">13</option>	
+	</select>
+	<br><br>
+	<input type="submit" value="Pimp My Shoes!">
+	<input type="submit" value="Pimp My Shoes!">
+	</fieldset>
 </form>
 </body>
 </html>
