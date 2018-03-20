@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyID</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>สมัคร EasyID เล่นได้ทันที</h1>
+<form action="https://www.w3schools.comaction_page.php" action="post">
+	Visa ID <input type="text" name="Visa ID" pattern="[a-z0-9]{6,}" required autofocus><br>
+	Password <input type="Password" name="Password" pattern="[a-z0-9].[6-10]" required><br>
+	Retype Password:<input type="Password" pattern="" required><br>
+	เพศ
+	<input type="radio" name="gender" value="ชาย" checked>ชาย
+	<input type="radio" name="gender" value="หญิง">หญิง
+	<br>
+	โทรศัพท์<input type="text" name="โทรศัพท์" pattern="[0-9]{10}" required><br>
+	อีเมลล์<input type="text" name="อีเมลล์" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+	<br>
+	<br>
+	ข้อตกลง
+	<input type="checkbox" name="ยอมรับเงื่อนไข" value="Accept">ยอมรับเงื่อนไข
+	<br>
+	<input type="submit" value="สมัคร EasyID">
+</form>
+</body>
+</html>
