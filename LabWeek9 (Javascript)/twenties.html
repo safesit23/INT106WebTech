@@ -17,12 +17,28 @@
 <body>
 <script type="text/javascript">
 	function part1() {
-    var x = document.getElementById("part1");
-    //x.style.border-bottom = "1px solid red";           
-    x.style.color = "red"; 
-}
-</script>
+    	var x = document.getElementById("part1");
+    	x.style.color = "red"; 
+	}
 
+	function part2(){
+		var x = document.getElementById("part2");
+    	x.style.color = "red";
+	}
+
+	function part3(){
+		var x = document.getElementById("part3");
+    	x.style.color = "gray";
+	}
+
+	function pic(){
+		var x = document.getElementById("pic");
+    	x.src = "Smile.png";
+	}
+
+
+
+</script>
 
 <button type="button" onclick="part1()">CHANGE IT!</button>
 <h1 id="part1">The Back of the New $20</h1>
@@ -32,17 +48,19 @@
 <p>I'm not going to concern myself here with a critique of the front of the bill (my friend Jeff says "it looks like something got spilled on it."). It's the <em>back</em> of the note that's driving me crazy.</p>
 
 
-<button type="button" onclick="">CHANGE IT!</button>
-<h2>Too Many 20s</h2>
+<button type="button" onclick="part2()">CHANGE IT!</button>
+<h2 id="part2">Too Many 20s</h2>
 
-<p><img src="twenties.gif" width="90" height="140" alt="20s closeup. If you are not seeing this image, check to make sure the file twenty_20s is in the same directory as this document" /><p>
+
+<button type="button" onclick="pic()">CHANGE IT!</button>
+<p><img id="pic" src="twenties.gif" width="90" height="140" alt="20s closeup. If you are not seeing this image, check to make sure the file twenty_20s is in the same directory as this document" /><p>
 <p>In particular, it's all those little 20s haphazardly sprinkled in the white space. They are nails-on-a-chalkboard to my visual design senses.</p>
 
 <p>Are they supposed to be another security feature? ("They'll <em>NEVER</em> be able to duplicate this $20... look at those 20s... they're all <em>OVER</em> the place!") Did they let a summer intern at the Bureau of Engraving and Printing design it? ("Hey, let Jimmy try it!") Were they concerned the $20 bill might be confused with a $10? ("What this 20 needs is a LOT more 20s.")</p>
 
 
-<button type="button" onclick="">CHANGE IT!</button>
-<h2>Connect-the-Dots</h2>
+<button type="button" onclick="part3()">CHANGE IT!</button>
+<h2 id="part3">Connect-the-Dots</h2>
 <p>There must be more to it. My theory: the new 20s contain subliminal connect-the-dots messages, like tiny constellations. So, perhaps the 20s connect to form a secret message designed to stimulate the economy ("SPEND MORE") or boost patriotism ("WE'RE NO.1").</p>
 
 <p>I'm not sure I've successfully cracked the code, so I'm asking for your help. I encourage you all to get a new $20 bill, connect the dots to find the message on the back (pencil is best), and mail it to me for review. Together, we can get to the bottom of this.</p>
