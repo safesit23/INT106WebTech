@@ -33,9 +33,14 @@
 <button id="button" onclick="changeContent()">CLICK ME!</button>
 <script type="text/javascript">
     function changeContent(){
-        var part1=document.getElementsByTagName("h1")[0]
+        var part1=document.getElementsByTagName("h1")[0];
         part1.style.color="red";
         part1.style.borderBottom="1px solid red";
+
+        var part2=document.getElementsByTagName("p");
+        part2[0].style.marginLeft= "100px";
+        part2[1].style.marginLeft= "100px";
+        part2[2].style.marginLeft= "100px";
     }
 </script>
 </body>
