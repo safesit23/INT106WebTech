@@ -67,7 +67,7 @@
 		//set myTicket to value of ticketNumber Element
 		myTicket=document.getElementById("ticketNumber").value;
 		//set disabled to ticketNumber Element
-		document.getElementById("ticketNumber").disabled="true";
+		document.getElementById("ticketNumber").disabled=true;
 		//make buyButton Element to disappear
 		document.getElementById("buyButton").style.visibility="hidden";
 		//set budget to budget minus 100
@@ -93,49 +93,80 @@
 	
 	function checkPrize(){
 		//set my1 to myTicket Modulus with 10
+		var my1=myTicket%10;
 		//set my2 to myTicket Modulus with 100
+		var my2=myTicket%100;
 		//set my3 to myTicket Modulus with 1000
+		var my3=myTicket%1000;
 		//set win1 to winNumber Modulus with 10
+		var win1=winNumber%10;
 		//set win2 to winNumber Modulus with 100
+		var win2=winNumber%100;
 		//set win3 to winNumber Modulus with 1000
-		
+		var win3=winNumber%1000;
 		//if myTicket equal to winNumber
+		if(myTicket==winNumber){
 			//alert message "you won jackpot 10000000"
+		alert("you won jackpot 10000000");
 			//set budget to budget plus 10000000
-			//make BudgetNote Element to show budget
-
+			budget+=10000000;
+			//make BudgetNote Element to show budget	
+			document.getElementById("BudgetNote").innerHTML=budget;
+		}
 		//else if my3 equal to win3
+		else if(my3==win3){
 			//alert message "you won jackpot 100000"
+			alert("you won jackpot 100000");
 			//set budget to budget plus 100000
+			budget+=100000;
 			//make BudgetNote Element to show budget
-
+			document.getElementById("BudgetNote").innerHTML=budget;
+		}
 		//else if my2 equal to win2
+		else if(my2==win2){
 			//alert message "you won jackpot 10000"
+			alert("you won jackpot 10000");
 			//set budget to budget plus 10000
+			budget+=10000;
 			//make BudgetNote Element to show budget
-			
+			document.getElementById("BudgetNote").innerHTML=budget;
+		}
 		//else if my1 equal to win1
+		else if(my1==win1){
 			//alert message "you won jackpot 1000"
+			alert("you won jackpot 1000");
 			//set budget to budget plus 1000
+			budget+=1000;
 			//make BudgetNote Element to show budget
-
-		//else
+			document.getElementById("BudgetNote").innerHTML=budget;
+		}else{
 			//alert message "sorry you don't get any prize"
-
+			alert("sorry you don't get any prize");
+		}
 		//set disabled to checkButton Element
+		document.getElementById("checkButton").style.visibility="hidden";
 		}
 	
 	function tryAgain(){
 		// if budget more than or equal 100
+		if(budget>=100){
 			//make winBlock Element to show ""
+			document.getElementById("winBlock").innerHTML="";
 			//make ticketNumber Element value to ""
+			document.getElementById("ticketNumber").value="";
 			//unset disabled to ticketNumber Element
+			document.getElementById("ticketNumber").disabled=false;
 			//make buyButton Element to show
+			document.getElementById("buyButton").style.visibility="initial";
 			//make drawButton Element to show
+			document.getElementById("drawButton").style.visibility="initial";
 			//make checkButton Element	to show
-		
-		//else
+			document.getElementById("checkButton").style.visibility="initial";
+		}else{
 			//alert message "You don't have enough money."
+			alert("You don't have enough money.");
+		}
+			
 		
 	
 	}
