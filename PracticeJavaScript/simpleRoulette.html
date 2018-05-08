@@ -40,7 +40,7 @@
 		</tr>
 		<tr id="row2">
 			<td class="slotWin" id="s7"></td>
-			<td class="" id=""><button onclick="spinBall()">spin</button></td>
+			<td class="" id=""><button id="spinButton" onclick="spinBall()">spin</button></td>
 			<td class="slotWin" id="s3"></td>
 		</tr>
 		<tr id="row3">
@@ -66,17 +66,27 @@
 	position = null;
 	
 	function checkBallPos(){
-
+		for(i=0;i<8;i++){
+			if(document.getElementById("s"+i).innerHTML=="0"){
+				position=i;
+			}
+		}
+		return position;
 	}
 	
 	function moveSlot(slot1,slot2,i){
-
+		setTimeout(function(){
+		document.getElementById(slot1).innerHTML="";
+		document.getElementById(slot2).innerHTML="0";
+		},i*i+100);
 	}
+
 	
 	function spinBall(){
-
+		
 	
 	}
+	
 	function showResult(i){
 
 	}
