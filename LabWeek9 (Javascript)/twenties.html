@@ -7,9 +7,6 @@
 <title>The Back of the Twenty Dollar Bill</title>
 
 <style type="text/css">
-
-
-
 </style>
 
 </head>
@@ -33,6 +30,13 @@
 
 <p>I'm not sure I've successfully cracked the code, so I'm asking for your help. I encourage you all to get a new $20 bill, connect the dots to find the message on the back (pencil is best), and mail it to me for review. Together, we can get to the bottom of this.</p>
 
-
+<button id="button" onclick="changeContent()">CLICK ME!</button>
+<script type="text/javascript">
+    function changeContent(){
+        var part1=document.getElementsByTagName("h1")[0]
+        part1.style.color="red";
+        part1.style.borderBottom="1px solid red";
+    }
+</script>
 </body>
 </html> 
