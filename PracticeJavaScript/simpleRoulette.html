@@ -78,13 +78,21 @@
 		setTimeout(function(){
 		document.getElementById(slot1).innerHTML="";
 		document.getElementById(slot2).innerHTML="0";
-		},i*i+100);
+		},i*i*i+100*i);
 	}
 
 	
 	function spinBall(){
-		
-	
+		document.getElementById("spinButton").disabled=true;
+		rand=Math.floor(Math.random()*8)+16;
+		for(i=0;i<rand;i++){
+			j = (i+position)%8;;
+			if(j==7){
+				moveSlot("s7","s0",i);
+			}else{
+				moveSlot("s"+j,"s"+(j+1),i);
+			}
+		}
 	}
 	
 	function showResult(i){
