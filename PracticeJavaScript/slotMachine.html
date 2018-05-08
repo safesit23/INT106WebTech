@@ -86,19 +86,19 @@
 	function spin(slot){
 		//Random Num to slot
 		if(slot==1){
-			slotC1=[1,1,1];
+			slotC1=randArray();
 			for(i=0;i<slotC1.length;i++){
 				document.getElementById("s1"+(i+1)).innerHTML=slotC1[i];
 			}
 		}
 		if(slot==2){
-			slotC2=[1,1,1];
+			slotC2=randArray();
 			for(i=0;i<slotC2.length;i++){
 				document.getElementById("s2"+(i+1)).innerHTML=slotC2[i];
 			}
 		}
 		if(slot==3){
-			slotC3=[1,1,1];
+			slotC3=randArray();
 			for(i=0;i<slotC3.length;i++){
 				document.getElementById("s3"+(i+1)).innerHTML=slotC3[i];
 			}
@@ -128,8 +128,25 @@
 	}
 
 	function randArray(){
-		arr=[]
-		return 
+		var arr=[];
+		var i=0;
+		while(arr.length<3){
+			num=Math.floor(Math.random()*3);
+			if(differentNumber(num,arr)){
+				arr.push(num);
+			}
+		}
+		return arr;
+	}
+
+	function differentNumber(num,arr){
+		var c=true;
+		for(var i=0;i<arr.length;i++){
+			if(num==arr[i]){
+				c=false; break;
+			}
+		}
+		return c;
 	}
 
 	
