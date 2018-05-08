@@ -75,6 +75,7 @@
 	}
 
 	function spin(slot){
+		//Random Num to slot
 		if(slot==1){
 			slotC1=[0,1,2];
 			for(i=0;i<slotC1.length;i++){
@@ -82,12 +83,43 @@
 			}
 		}
 		if(slot==2){
-
+			slotC2=[1,1,7];
+			for(i=0;i<slotC2.length;i++){
+				document.getElementById("s2"+(i+1)).innerHTML=slotC2[i];
+			}
 		}
 		if(slot==3){
+			slotC3=[0,1,4];
+			for(i=0;i<slotC3.length;i++){
+				document.getElementById("s3"+(i+1)).innerHTML=slotC3[i];
+			}
+		//CHECK----------
+		if((slotC1[0]==slotC2[0])){
+			if(slotC1[0]==slotC3[0]){
+				winscore++;
+			}
 
+		}else if(slotC1[1]==slotC2[1]){
+			if(slotC1[1]==slotC3[1]){
+				winscore++;
+			}
+
+		}else if(slotC1[2]==slotC2[2]){
+			if(slotC1[2]==slotC3[2]){
+				winscore++;
+			}
+
+		}else{
+			losescore++;
 		}
+		document.getElementById("winPoint").innerHTML=winscore;
+		document.getElementById("losePoint").innerHTML=losescore;
+		}
+		
+		
+
 	}
+
 	
 
 	/*Hint Math.random() return number between 0 and 1
