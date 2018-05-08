@@ -10,7 +10,7 @@
 			document.getElementById("stdName").disabled=true;
 			document.getElementById("button").style.display='none';
 			alert("Hello "+name);
-			document.write("Please Enter RESET BUTTON");
+			document.getElementById("text").innerHTML="CLICK RESET BUTTON"
 			
 		}
 		
@@ -18,11 +18,12 @@
 			document.getElementById("stdName").value=" ";
 			document.getElementById("stdName").disabled= false;
 			document.getElementById("button").style.display='initial';
+			document.getElementById("text").innerHTML="INPUT NAME"
 		}
 		
 
 	</script>
-	<h3>INPUT NAME</h3>
+	<h3 id="text">INPUT NAME</h3>
 		Name:<input id="stdName" type="text" name="stdName"><br>
 		<button id="button" onclick="alertMessage()">summit</button>
 		<button id="reset" onclick="resetText()">RESET</button>
