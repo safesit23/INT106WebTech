@@ -2,15 +2,21 @@
 <html>
 <head>
 	<title>TEST JAVASCRIPT</title>
+	<style>
+		body{
+			background-color: #FFF6D4;
+		}
+	</style>
 </head>
 <body>
-	<script type="text/javascript">
+	<script>
 		function alertMessage(){
 			var name=document.getElementById("stdName").value;
 			document.getElementById("stdName").disabled=true;
 			document.getElementById("button").style.display='none';
 			alert("Hello "+name);
-			document.getElementById("text").innerHTML="CLICK RESET BUTTON"
+			document.body.style.backgroundColor = "#36342D";
+
 			
 		}
 		
@@ -19,6 +25,7 @@
 			document.getElementById("stdName").disabled= false;
 			document.getElementById("button").style.display='initial';
 			document.getElementById("text").innerHTML="INPUT NAME"
+			document.body.style.backgroundColor = "#FFF6D4";
 		}
 		
 
