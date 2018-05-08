@@ -56,42 +56,132 @@
 		//change background color of rock to "lightblue"
 		//change background color of scissors to ""
 		//change background color of paper to ""
-		
 		document.getElementById("rock").style.backgroundColor="lightblue";
 		document.getElementById("scissors").style.backgroundColor="";
 		document.getElementById("paper").style.backgroundColor="";
+		//random 0 - 2 to "com" variable //note o rock, 1 scissors, 2 paper
+	com=Math.random()*3;
+	com=Math.floor(com);
+	console.log=com;
+	//if com is 0 then
+	if(com==0){
+		//change image of computer side to rock
+		document.getElementById("compic").src="res/rock.jpg";
+		// drawscore +1
+		drawscore++;
+		//change drawPoint to display drawscore
+		document.getElementById("drawPoint").innerHTML=drawscore;
+		//change result to display "draw"
+		document.getElementById("result").innerHTML="draw";
+	}
+	//if com is 1 then
+	if(com==1){
+		//change image of computer side to scissors
+		document.getElementById("compic").src="res/scissors.jpg";
+		// winscore +1
+		winscore++;
+		//change winPoint to display winscore
+		document.getElementById("winPoint").innerHTML=winscore;
+		//change result to display "win"
+		document.getElementById("result").innerHTML="win";
+	}
+	//if com is 2 then
+	if(com==2){
+		//change image of computer side to paper
+		document.getElementById("compic").src="res/paper.jpg";
+		// losescore +1
+		losescore++;
+		//change LosePoint to display losescore
+		document.getElementById("losePoint").innerHTML=losescore;
+		//change result to display "lose"
+		document.getElementById("result").innerHTML="lose";
+	}
+
 	}
 	if(str=="scissors"){
 		document.getElementById("rock").style.backgroundColor="";
 		document.getElementById("scissors").style.backgroundColor="lightblue";
 		document.getElementById("paper").style.backgroundColor="";
+		com=Math.random()*3;
+	com=Math.floor(com);
+	console.log=com;
+		//if com is 0 then
+	if(com==0){
+		//change image of computer side to rock
+		document.getElementById("compic").src="res/rock.jpg";
+		// drawscore +1
+		drawscore++;
+		//change drawPoint to display drawscore
+		document.getElementById("drawPoint").innerHTML=drawscore;
+		//change result to display "draw"
+		document.getElementById("result").innerHTML="draw";
+	}
+	//if com is 1 then
+	if(com==1){
+		//change image of computer side to scissors
+		document.getElementById("compic").src="res/scissors.jpg";
+		// winscore +1
+		winscore++;
+		//change winPoint to display winscore
+		document.getElementById("winPoint").innerHTML=winscore;
+		//change result to display "win"
+		document.getElementById("result").innerHTML="win";
+	}
+	//if com is 2 then
+	if(com==2){
+		//change image of computer side to paper
+		document.getElementById("compic").src="res/paper.jpg";
+		// losescore +1
+		losescore++;
+		//change LosePoint to display losescore
+		document.getElementById("losePoint").innerHTML=losescore;
+		//change result to display "lose"
+		document.getElementById("result").innerHTML="lose";
+	}
 
 	}	
 	if(str=="paper"){
 		document.getElementById("rock").style.backgroundColor="";
 		document.getElementById("scissors").style.backgroundColor="";
 		document.getElementById("paper").style.backgroundColor="lightblue";
-	}
-	//random 0 - 2 to "com" variable //note o rock, 1 scissors, 2 paper
-		document.getElementById("result").innerHTML="res/rock.jpg"
+		com=Math.random()*3;
+	com=Math.floor(com);
+	console.log=com;
 		//if com is 0 then
-		  //change image of computer side to rock
-		  // drawscore +1
-		  //change drawPoint to display drawscore
-		  //change result to display "draw"
-		
-		//if com is 1 then
-		  //change image of computer side to scissors
-		  // winscore +1
-		  //change drawPoint to display winscore
-		  //change result to display "win"
-		
-		//if com is 2 then
-			//change image of computer side to paper
-			// losescore +1
-			//change drawPoint to display losescore
-			//change result to display "lose"
-	
+	if(com==0){
+		//change image of computer side to rock
+		document.getElementById("compic").src="res/rock.jpg";
+		// drawscore +1
+		drawscore++;
+		//change drawPoint to display drawscore
+		document.getElementById("drawPoint").innerHTML=drawscore;
+		//change result to display "draw"
+		document.getElementById("result").innerHTML="draw";
+	}
+	//if com is 1 then
+	if(com==1){
+		//change image of computer side to scissors
+		document.getElementById("compic").src="res/scissors.jpg";
+		// winscore +1
+		winscore++;
+		//change winPoint to display winscore
+		document.getElementById("winPoint").innerHTML=winscore;
+		//change result to display "win"
+		document.getElementById("result").innerHTML="win";
+	}
+	//if com is 2 then
+	if(com==2){
+		//change image of computer side to paper
+		document.getElementById("compic").src="res/paper.jpg";
+		// losescore +1
+		losescore++;
+		//change LosePoint to display losescore
+		document.getElementById("losePoint").innerHTML=losescore;
+		//change result to display "lose"
+		document.getElementById("result").innerHTML="lose";
+	}
+	}
+
 	}
 	
 		
