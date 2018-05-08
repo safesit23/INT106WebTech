@@ -71,7 +71,16 @@
 	slotC3 = [];
 
 	function reMatch(){
-		
+		document.getElementById("result").innerHTML="";
+		for(i=0;i<slotC1.length;i++){
+				document.getElementById("s1"+(i+1)).innerHTML="";
+		}
+		for(i=0;i<slotC2.length;i++){
+				document.getElementById("s2"+(i+1)).innerHTML="";
+		}
+		for(i=0;i<slotC3.length;i++){
+				document.getElementById("s3"+(i+1)).innerHTML="";
+		}
 	}
 
 	function spin(slot){
@@ -93,7 +102,8 @@
 			for(i=0;i<slotC3.length;i++){
 				document.getElementById("s3"+(i+1)).innerHTML=slotC3[i];
 			}
-		//CHECK----------
+
+		//--------------CHECK-------------------
 		if((slotC1[0]==slotC2[0])&&(slotC1[0]==slotC3[0])){
 			winscore++;
 			document.getElementById("result").innerHTML="WIN";
@@ -114,9 +124,12 @@
 		document.getElementById("winPoint").innerHTML=winscore;
 		document.getElementById("losePoint").innerHTML=losescore;
 		}
-		
-		
 
+	}
+
+	function randArray(){
+		arr=[]
+		return 
 	}
 
 	
