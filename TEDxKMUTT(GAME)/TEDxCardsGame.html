@@ -50,6 +50,17 @@
 		var lastSelect;
 		var canSelect=false;
 		var arrayNumber = ["1","2","1","2","3","2","3","1","2","1","2","3","3","1","3","1"];
+		var arrayText = ["1","2","1","2","3","2","3","1","2","1","2","3","3","1","3","1"];
+
+		function timesetup(){
+			var timeleft = 60;
+    		var downloadTimer = setInterval(function(){
+    		timeleft--;
+    		document.getElementById("topic").textContent = "Countdown "+timeleft+" sec";
+    		if(timeleft <= 0)
+			clearInterval(downloadTimer);
+    		},1000);
+		}
 
 		function selectBox(i){
 			if(canSelect){
@@ -91,7 +102,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td id="topic" colspan="4">GAME</td>
+			<td id="topic" colspan="4">---GAME---</td>
 		</tr>
 		<tr>
 			<td class="block" id="b1" onclick="selectBox(1)">
