@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEDxKMUTT GAME</title>
+	<style>
+		body{
+			background-color: black;
+			color: white;
+			padding-top: 2%;
+			font-family: sans-serif;
+		}
+		table {
+			display: flex;
+			justify-content: center;
+			border-top-width: 1px;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			border-left-width: 1px;
+		}
+		#logo, #topic{
+			text-align: center;
+			padding: 2px;
+			padding-bottom: 20px;
+			font-size: 1.5em;
+		}
+		#inputName{
+			display: flex;
+			justify-content: center;
+		}
+		.block{
+		font-size: 1.5em;
+		text-align: center;
+		width: 200px;
+		height: 100px;
+		padding: 2px;
+		background-color: #5C0000;
+		}
+		button{
+			font-size: 1em;
+		}
+		#userName{
+			margin: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		name;
+		lastSelect;
+		canSelect=false;
+		//setNumber = ["1","2","1","2","3","2","3","1","2","1","2","3","3","1","3","1"];
+
+		function selectBox(i){
+			if(canSelect){
+				document.getElementById("b"+i).innerHTML="<br>"+name;
+				document.getElementById("b"+i).style.backgroundColor="#BF0000";
+				lastSelect=i;
+				canSelect=false;
+			}
+		}
+		function submit(){
+			name=document.getElementById("userName").value;
+			document.getElementById("userName").disabled=true;
+			document.getElementById("submit").disabled=true;
+			canSelect=true;
+		}
+
+		function nextPlayer(){
+			document.getElementById("userName").value="";
+			document.getElementById("b"+lastSelect).style.backgroundColor="#36352D";
+			document.getElementById("userName").disabled=false;
+			document.getElementById("submit").disabled=false;
+		}
+
+		function reset(){
+			name="";
+			var tagImg="<img src=\"pic/kmutt.png\" style=\"width: 90px\">";
+			for(i=1;i<=16;i++){
+				document.getElementById("b"+i).innerHTML=tagImg;
+				document.getElementById("b"+i).style.backgroundColor="#5C0000";
+			}
+		}
+
+	</script>
+
+	<table>
+		<tr>
+			<td id="logo" colspan="4">
+				<img src="pic/TEDxKMUTTxlogo.png" style="width: 300px">
+			</td>
+		</tr>
+		<tr>
+			<td id="topic" colspan="4">GAME</td>
+		</tr>
+		<tr>
+			<td class="block" id="b1" onclick="selectBox(1)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b2" onclick="selectBox(2)">
+					<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b3" onclick="selectBox(3)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b4" onclick="selectBox(4)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+		</tr>
+		<tr>
+			<td class="block" id="b5" onclick="selectBox(5)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b6" onclick="selectBox(6)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b7" onclick="selectBox(7)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b8" onclick="selectBox(8)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+		</tr>
+		<tr>
+			<td class="block" id="b9" onclick="selectBox(9)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b10" onclick="selectBox(10)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b11" onclick="selectBox(11)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b12" onclick="selectBox(12)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+		</tr>
+		<tr>
+			<td class="block" id="b13" onclick="selectBox(13)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b14" onclick="selectBox(14)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b15" onclick="selectBox(15)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+			<td class="block" id="b16" onclick="selectBox(16)">
+				<img src="pic/kmutt.png" style="width: 90px">
+			</td>
+		</tr>
+		<tr id="inputName">
+			<td colspan="4">
+				Name: <input id="userName" type="text" value="" placeholder="NAME" height="48px">
+				<button id="submit" onclick="submit()">SUBMIT</button>
+				<button onclick="nextPlayer()">NEXT Player</button>
+				<button onclick="reset()">RESET GAME</button>
+
+			</td>
+		</tr>
+	</table>
+
+	<div id="Instructions" style="padding: 10px">
+		<h4 id="headIns">Instructions</h4>
+		<p>1.Field your name and click button "SUBMIT".<br>
+			2.Select the box that you want.<br>
+			3.Click button "NEXT" for new player.
+		</p>
+	</div>
+	
+</body>
+</html>
