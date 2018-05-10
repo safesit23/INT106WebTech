@@ -103,10 +103,16 @@
 		dis.innerHTML += "-";
 	}
 	function clickMultiply(){
-
+		operation = "multiply";
+		firstNum=parseInt(secondNum);
+		secondNum=0;
+		dis.innerHTML += "*";
 	}
 	function clickDivide(){
-
+		operation = "divide";
+		firstNum=parseInt(secondNum);
+		secondNum=0;
+		dis.innerHTML += "/";
 	}
 
 	function clickEqual(){
@@ -120,9 +126,16 @@
 			document.getElementById("ans").innerHTML="ans = "+sum;
 			//call function clickClear
 			clickClear();
-		}
-		else if(operation=="minus"){
+		} else if(operation=="minus"){
 			sum=firstNum-parseInt(secondNum);
+			document.getElementById("ans").innerHTML="ans = "+sum;
+			clickClear();
+		} else if(operation=="multiply"){
+			sum=firstNum*parseInt(secondNum);
+			document.getElementById("ans").innerHTML="ans = "+sum;
+			clickClear();
+		} else if(operation=="divide"){
+			sum=firstNum/parseInt(secondNum);
 			document.getElementById("ans").innerHTML="ans = "+sum;
 			clickClear();
 		}
