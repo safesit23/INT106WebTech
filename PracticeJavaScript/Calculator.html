@@ -97,7 +97,10 @@
 		dis.innerHTML += "+";
 	}
 	function clickMinus(){
-
+		operation = "minus";
+		firstNum=parseInt(secondNum);
+		secondNum=0;
+		dis.innerHTML += "-";
 	}
 	function clickMultiply(){
 
@@ -116,8 +119,13 @@
 			//show sum value in ans box with pattern "ans ="  
 			document.getElementById("ans").innerHTML="ans = "+sum;
 			//call function clickClear
+			clickClear();
 		}
-
+		else if(operation=="minus"){
+			sum=firstNum-parseInt(secondNum);
+			document.getElementById("ans").innerHTML="ans = "+sum;
+			clickClear();
+		}
 	}
 
 
