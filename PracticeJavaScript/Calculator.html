@@ -90,12 +90,21 @@
 	function clickPlus(){
 		operation = "plus";
 		// set firstNum to be secondNum *don't forget to transform secondNum to be a number
+		firstNum=parseInt(secondNum);
 		//set secondNum as zero
+		secondNum=0;
 		//add string " + " to display
+		dis.innerHTML += "+";
 	}
-	function clickMinus(){}
-	function clickMultiply(){}
-	function clickDivide(){}
+	function clickMinus(){
+
+	}
+	function clickMultiply(){
+
+	}
+	function clickDivide(){
+
+	}
 
 	function clickEqual(){
 		if(operation==0){
@@ -103,7 +112,9 @@
 		}
 		if(operation=="plus"){
 			//set sum as fristNum plus secondNum *don't forget to transform secondNum to be a number
+			sum=firstNum+parseInt(secondNum);
 			//show sum value in ans box with pattern "ans ="  
+			document.getElementById("ans").innerHTML="ans = "+sum;
 			//call function clickClear
 		}
 
