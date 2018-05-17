@@ -19,7 +19,7 @@
 	<form action="/action_page.php" action="post" >
 		<fieldset>
 			<legend>FORM1</legend>
-			Email: <input type="Email" name="">
+			Email: <input type="Email" name="" autofocus size="30">
 			<br>
 			Username: <input type="text" name="username" value="" placeholder="username" required pattern="[a-z0-9]+@">
 			<br>
@@ -27,6 +27,15 @@
 			<br>
 			Confirm Password: <input id="repass" type="password" name="repassword" required onblur="checkpass()"><span id="check"></span>
 			<br>
+			Address:<br>
+			<textarea name="Address" cols="30">type
+			</textarea>
+			<br>
+			Number: <input type="number" name="num" step="3" min="0">
+			<br>
+			TEL:<input type="tel" name="Tel" pattern="[0-9]{10}">
+			<br>
+			Color: <input type="color" name="">
 
 		</fieldset>
 		<br>
