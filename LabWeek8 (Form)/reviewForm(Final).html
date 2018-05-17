@@ -14,14 +14,15 @@
 				document.getElementById("check").innerHTML="NOT SAME";
 			}
 		}
+
 	</script>
 	<h2>PRACTICE FORM</h2>
-	<form action="/action_page.php" action="post" >
+	<form action="/action_page.php" action="post" target="_blank">
 		<fieldset>
 			<legend>FORM1</legend>
-			Email: <input type="Email" name="" autofocus size="30">
+			Email: <input type="Email" name="email" value="test@mail.com" autofocus size="30">
 			<br>
-			Username: <input type="text" name="username" value="" placeholder="username" required pattern="[a-z0-9]+@">
+			Username: <input type="text" name="username" value="test1234" placeholder="username" required pattern="[a-z0-9]{8,16}">
 			<br>
 			Password: <input id="pass" type="password" name="password" required>
 			<br>
@@ -35,16 +36,35 @@
 			<br>
 			TEL:<input type="tel" name="Tel" pattern="[0-9]{10}">
 			<br>
-			Color: <input type="color" name="">
+			Color: <input type="color" name=""><br>
+			Time: <input type="time" name="">
 
 		</fieldset>
 		<br>
 		<fieldset>
 			<legend>FORM2</legend>
-			
+			CHOOSE:
+			<select name="select">
+				<script type="text/javascript">
+					var now = new Date();
+					for(var year=now.getFullYear();year>now.getFullYear()-60;year--){
+						document.write("<option value='"+year+"'>"+year+"</option>");
+					}
+				</script>
+			</select>
+			<br>
+			GENDER: 
+			<input type="radio" name="gender" value="male" checked>male
+			<input type="radio" name="gender" value="female">female
+			<br>
+			CAREER:
+			<input type="checkbox" name="CAREER" value="student">student 
+			<input type="checkbox" name="CAREER" value="doctor">doctor
+
 		</fieldset>
+		<input id="rule" type="checkbox" required>I understand the rule.
 		<br>
-		<input type="submit">
+		<input id="submit" type="submit">
 	</form>
 </body>
 </html>
