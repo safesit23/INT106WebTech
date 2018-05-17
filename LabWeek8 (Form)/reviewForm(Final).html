@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>PracticeForm</title>
 </head>
 <body>
+	<script type="text/javascript">
+		function checkpass(){
+			var pass = document.getElementById("pass").value;
+			var repass = document.getElementById("repass").value;
+			if(pass==repass){
+				document.getElementById("check").innerHTML="TRUE";
+			}else{
+				document.getElementById("check").innerHTML="NOT SAME";
+			}
+		}
+	</script>
+	<h2>PRACTICE FORM</h2>
+	<form action="/action_page.php" action="post" >
+		<fieldset>
+			<legend>FORM1</legend>
+			Email: <input type="Email" name="">
+			<br>
+			Username: <input type="text" name="username" value="" placeholder="username" required pattern="[a-z0-9]+@">
+			<br>
+			Password: <input id="pass" type="password" name="password" required>
+			<br>
+			Confirm Password: <input id="repass" type="password" name="repassword" required onblur="checkpass()"><span id="check"></span>
+			<br>
 
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>FORM2</legend>
+			
+		</fieldset>
+		<br>
+		<input type="submit">
+	</form>
 </body>
 </html>
